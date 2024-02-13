@@ -18,8 +18,7 @@ davisdata <- read.csv(file="UCDavis.csv")
 
 # Introduction
 
-DATA are from the UCDavis.csv
-Is the average amount of alcohol consumed per week different for the different seating rows?
+The research question is this: Is there a difference in the average amount of alcohol consumed per week by students who sit in row 1, row 2, or row 3 of the UCDavis classroom.
 
 $H_0$ There is no difference on the average amount of alcohol consumed per week based on seating row.
 
@@ -29,13 +28,19 @@ $H_A$ There is a difference on the average amount of alcohol consumed per week b
 
 We are trying to predict alcohol consumption based on seating row. 
 
+Data Form UC Davis: 
+
 alcohol ~ Seat
 
 alcohol is a numerical variable
 
 Seat is a categorical variable
 
-So we use the numerical~cat helper file.
+So we use the Numerical~cat helper file.
+
+# Description
+
+## Graphical Description
 
 ## Now with ggplot - first select the basic data
 
@@ -55,7 +60,7 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-## Numerical Summarys 
+## Numerical Summaries 
 
 ## Inferential Tests
 
