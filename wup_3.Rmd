@@ -42,6 +42,10 @@ So we use the Numerical~cat helper file.
 
 ## Graphical Description
 
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+
 ## Now with ggplot - first select the basic data
 
 ```{r}
