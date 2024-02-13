@@ -48,10 +48,27 @@ boxplot(alcohol~Seat,data=davisdata)
 
 ## Numerical Description 
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
 
+Based on the graph above the back row has a mean of 9.625, the middle row has a mean of 3.283133 and the front row has a mean of 1.803030. It looks like the back row drinks more.
 
 ## Inferential Description
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+The P value is 0.000116 < 0.05. That means the students in aal the rows do not consume the same amount of alcohol.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+
+From the TukeyHSD test, we founf that the students in the back row drink more than the students in the front row and the middle row. There is no difference in consumption between the middle and front rows.
+
 ## Conclusions and Discussion
 
-
+We wanted to know if there is a difference between the alcohol consumed between the row you choose to sit in. Based on the data and the P-value of 0.000116 < 0.05, we reject the $H_0$ that there is no difference on the average amount of alcohol consumed per week based on seating row. We can cleary see by the TukeyHSD test that students who sit in the back row consume more alcohol than those in the middle and front row. There is no difference in consumption of alcohol between the front and middle row.
